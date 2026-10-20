@@ -6,12 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-<script async="True">
-    let ws = new WebSocket('ws://localhost:8000/ws/echo')
+<script>
+    let ws = new WebSocket('ws://localhost:8000/ws/echo');
     ws.onmessage = (message) => {
-        alert(message.text);
-    }
-    await ws.send('Privit')
+        alert(message.data);
+    };
+    ws.onopen = () => {
+        ws.send(' 2 + 3 ');
+    };
 </script>
 </body>
 </html>

@@ -10,4 +10,4 @@ application = ProtocolTypeRouter(
         'websocket': router
     }
 )
-# django channels uvicorn[standart]
+# django channels uvicorn[standard]
